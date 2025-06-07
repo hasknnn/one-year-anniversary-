@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Primary Meta Tags -->
+<meta property="og:title" content="One year with my love 🤍">
+<meta property="og:description" content="Celebrating our beautiful journey together">
+<meta property="og:image" content="https://media.giphy.com/media/7ppLym5eheByYAvdDW/giphy.gif">
+<meta property="og:url" content="https://hasknnn.github.io/one-year-anniversary-/">
+<meta property="og:type" content="website">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Anniversary celebration">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One year with my love 🤍">
+<meta name="twitter:description" content="Celebrating our beautiful journey together">
+<meta name="twitter:image" content="https://media.giphy.com/media/7ppLym5eheByYAvdDW/giphy.gif">
+
+<!-- Cache-Buster (Optional) -->
+<meta property="og:image:updated_time" content="2024-06-20T00:00:00Z">
+
+<!-- REQUIRED -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- RECOMMENDED -->
+<meta property="og:image:alt" content="Anniversary celebration">
+
+<!-- OPTIONAL (Only if your GIF is 1200x630) -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+  <title>One Year Anniversary</title>
+   <!-- Favicon -->
+  <link rel="icon" type="image/png" href="pictures/favicon.png">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  
+  <link rel="preload" href="sounds/song.mp3" as="audio">
+  
+  <style>
+    /* General Styles */
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #e6e6fa,#fadadd, #b2f2bb, #d8bfd8);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+      position: relative;
+      text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+      overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch; /* iOS only */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+    }
+
+    /* iPhone Font Scaling (iOS Safari) */
+    @supports (-webkit-touch-callout: none) {
+      body {
+        font-size: 1.1em; /* Slightly larger base font */
+      }
+      
+      .askout-section p {
+        font-size: 1.08em !important; /* Bigger paragraphs */
+      }
+      
+      h1 {
+        font-size: 2.5em !important; /* Larger headings */
+      }
+      
+      h2 {
+        font-size: 1.5em !important;
+      }
+    }
+    
+    /* Target iOS devices only */
+@supports (-webkit-touch-callout: none) {
+  /* Make the GIF in askout section larger */
+  .askout-section .bottom-gif {
+    width: 160px !important;  /* Adjust size as needed */
+    height: 160px !important; /* Maintain aspect ratio */
+    margin-left: 15px !important; /* Adjust spacing if needed */
+  }
+}
+
+    /* Semi-Transparent Overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+/* Disable all text selection by default */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection only in content areas */
+p, h1, h2, .memory-text {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Completely disable any interaction with media */
+img, video, .polaroid, .swiper-slide {
+  pointer-events: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Media elements - disable during text selection only */
+img, video {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Enable long-press context menu for media */
+img, video {
+  pointer-events: auto !important; /* Re-enable for long-press */
+  -webkit-touch-callout: default !important; /* Re-enable iOS context menu */
+}
+
+/* Polaroids keep full protection (no download) */
+.polaroid, .swiper-slide {
+  pointer-events: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+/* Fixes 95% of mobile jank */
+.timeline > * {
+  transform: translateZ(0);
+}
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Falling Petals */
+    .petals-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .petal {
+      position: absolute;
+      top: -5%;
+      width: 25px;
+      height: 25px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.7;
+      animation: fall linear infinite;
+      z-index: -1;
+    }
+
+    .petal.red {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ff6b6b" d="M50 0C30 40,10 60,50 90S90 60,50 0z"/></svg>');
+    }
+
+    .petal.lavender {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23b57edc" d="M50 0C30 40,10 60,50 90S90 60,50 0z"/></svg>');
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10%) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.7;
+      }
+      90% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    h1, h2 {
+      color: #d6336c;
+    }
+
+    /* Opening Section (Message + Pictures) */
+    .opening-section {
+      margin-bottom: 40px;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .opening-section.hidden {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    .opening-message {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .opening-message h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    .opening-message p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 2.5s ease;
+    }
+
+    /* Pictures Below Opening Message */
+    .pictures-below {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      animation: fadeIn 3s ease;
+    }
+
+    .pictures-below img {
+      width: 45%;
+      max-width: 400px;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .pictures-below img:hover {
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .pictures-below img:first-child {
+      transform: translateY(-20px);
+    }
+
+    /* Memory Sections */
+    .memory, .askout-section {
+      margin-bottom: 40px;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .memory.hidden, .askout-section.hidden {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    .memory img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: block;
+      margin: 20px auto;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .memory img:hover {
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px auto;
+    }
+
+/* Remove ALL tap highlights */
+.polaroid, .polaroid * {
+  -webkit-tap-highlight-color: transparent; /* iOS/Safari */
+  -webkit-touch-callout: none; /* Disable callout dialog */
+  user-select: none; /* Prevent text selection */
+  outline: none !important; /* Remove focus outline */
+}
+
+    /* === POLAROID WALL STYLING === */
+    .polaroid-wall {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px; /* space between rows */
+      margin-top: 40px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 5px; /* space between Polaroids in a row */
+      position: relative; /* Ensures the string is placed correctly */
+    }
+
+    .polaroid {
+      position: relative;
+      background: white;
+      ignore /* Intentional - maintains correct clip positioning */
+      overflow: hidden; /* hides anything beyond the border */
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* shadow for depth */
+      width: 140px; /* Adjusted for Polaroid's width */
+      height: 180px; /* Adjusted for Polaroid's height */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer; /* Shows it's clickable */
+      transition: transform 0.3s ease !important; /* Smooth hover/click effect */
+    }
+
+    .polaroid img {
+      width: 130px; /* Slightly smaller than the container */
+      height: 130px;
+      border-radius: 0px; /* Rounded corners for the image */
+      object-fit: cover;
+      display: block;
+      margin-bottom: 20px; /* Space between the image and the overflow */
+    }
+
+    .polaroid:hover {
+      transform: scale(1.03) !important; /* Slightly larger */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important; /* Deeper shadow */
+    }
+
+    .string {
+      position: absolute;
+      top: -10px; /* Positioned slightly above the Polaroid */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 30px;
+      fill: none;
+      stroke: #000; /* Brown color for the string */
+      stroke-width: 2;
+      z-index: 0; /* Set to 0 to make sure it's behind the Polaroids */
+    }
+
+    .string svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .clip {
+      position: absolute;
+      width: 30px;
+      box-shadow: none !important;
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Fullscreen Polaroid Overlay (with fade transition) */
+.fullscreen-polaroid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0; /* Start invisible */
+  pointer-events: none; /* Disable clicks when hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade */
+}
+
+.fullscreen-polaroid.active {
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Enable clicks when active */
+}
+
+.fullscreen-polaroid img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  transform: scale(0.95); /* Slightly smaller initially */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom */
+}
+
+.fullscreen-polaroid.active img {
+  transform: scale(1); /* Normal size when active */
+}
+
+    video {
+      position: relative;
+      z-index: 1;
+      width: 45%;
+      max-width: 400px;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+      transition: transform 0.5s ease, box-shadow 0.5s ease !important;
+    }
+
+    video:hover {
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    video:first-child {
+      transform: translateY(-20px);
+    }
+
+    /* Mobile-Friendly Styles */
+    @media (max-width: 768px) {
+      .pictures-below img, video {
+        width: 45%;
+        max-width: none;
+      }
+
+      .pictures-below img:first-child, video:first-child {
+        transform: translateY(-10px);
+      }
+
+      .opening-message h1 {
+        font-size: 2em;
+      }
+
+      .opening-message p {
+        font-size: 1em;
+      }
+    }
+
+    /* Styles for the "asking you out" section */
+    .askout-section {
+      margin-bottom: 40px;
+    }
+
+    .askout-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .askout-section img.top-image {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: -10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Base shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: block; /* Ensures proper shadow rendering */
+  position: relative; /* Helps with shadow layering */
+    }
+
+    .askout-section .memory-text {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 1.6;
+      position: relative;
+      overflow: visible !important;
+    }
+
+    .askout-section .memory-text {
+  text-align: justify;
+  position: relative;
+}
+
+.askout-section .bottom-gif {
+  float: right;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: auto auto auto 5px;
+  object-fit: cover;
+  shape-outside: margin-box;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Fallback for browsers that don't support shape-outside */
+@supports not (shape-outside: url('')) {
+  .askout-section .bottom-gif {
+    shape-outside: margin-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .askout-section .bottom-gif {
+    float: right;
+    display: block;
+    shape-margin: 10px;
+    margin: auto auto auto 5px;
+    shape-outside: none;
+  }
+}
+
+    /* Fallback for iOS */
+    @supports not (shape-outside: margin-box) {
+      .askout-section .memory-text {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .askout-section .bottom-gif {
+        float: none;
+        align-self: flex-end;
+        margin: 15px 0;
+      }
+    }
+
+    .askout-section .bottom-gif:hover {
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    /* Add this to your existing styles */
+.askout-section .top-image {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.askout-section .top-image:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+    /* Swiper Styles */
+    .swiper-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      aspect-ratio: 9 / 7.5;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.5s ease;
+    }
+
+    .swiper-slide:hover img {
+      transform: scale(1.1);
+    }
+
+    .swiper-slide:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 3D Tilt Effect */
+    .swiper-slide {
+      perspective: 1000px;
+    }
+
+    .swiper-slide:hover {
+      transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    }
+
+    /* Keyframes for Fade-In Animation */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Loading Indicator */
+    #loading-indicator {
+      position: fixed;
+      top: 10px;
+      right: -25px;
+      width: 50px;
+      height: 50px;
+      display: none;
+    }
+
+    #loading-indicator img {
+      width: 20%;
+      height: 20%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <!-- Petals Container -->
+  <div class="petals-container" id="petalsContainer"></div>
+
+  <div class="timeline">
+    <!-- Opening Section (Message + Pictures) -->
+    <div class="opening-section">
+      <div class="opening-message">
+        <h1>Miah</h1>
+        <p>
+          I just want to start this by telling you how much I love you, how much you mean to me, and how grateful I am to have you in my life. Every moment with you is so special, and I cherish everything we've shared together. To show you just how much you mean to me, I've put together a collection of memories from the time I've spent with you
+        </p>
+      </div>
+      <div class="pictures-below">
+        <img src="pictures/picture1.jpeg" alt="Limerence">
+        <img src="pictures/picture2.jpg" alt="Limerence">
+      </div>
+    </div>
+
+    <!-- Asking You Out Section -->
+    <div class="askout-section">
+  <h2>The Day I Asked You Out (October 23)</h2>
+  <img src="pictures/askout1.jpg" alt="Pokéball Throw" class="top-image">
+  <div class="memory-text">
+    <p>
+      It all started the day I made the best decision of my life—asking you to be my girlfriend.
+      I remember you weren't ready, but you still wanted to give it a shot, and I can only hope
+      I've never made you regret that decision.
+      
+      Every day I've spent with you since we met has been a blessing, and I wouldn't trade a 
+      single moment of it for anything.
+      
+      You've brought so much love and happiness into my life, and I truly couldn't 
+      have asked for a better partner. 
+
+      <img src="pictures/askout2.gif" alt="Pokéball Catch" class="bottom-gif">
+
+      I hope to spend every moment of my life alongside you, creating even more beautiful 
+      memories together
+    </p>
+  </div>
+</div>
+
+    <!-- Memory 1: Movie Date -->
+    <div class="memory">
+      <h2>Movie Date (October 31st)</h2>
+      <p>
+        The first time we had a movie date, it was on halloween, we decided to watch a horror movie, and hopped on Discord so excitedly to watch Monster House—just to be disappointed because it didn't let us talk, smh. But ngl, it's still one of my favorite memories because I got to watch the movie with you. The way I could just feel you there with me—it all made me so happy and excited. I had so much fun, and after we finished the movie, staying on call to talk before you went to bed was so nice. I didn't want that moment to end. I just wanted time to stop so I could keep talking to the girl who completely stole my heart 🤍
+      </p>
+    </div>
+
+    <!-- Memory 2: Minecraft Date -->
+    <div class="memory">
+      <h2>Minecraft Date (November 12th)</h2>
+      <p>
+        The first time we played Minecraft, I was so lost, but you guided me through it. We're still not gonna forget how you laughed at me when I was dying and drowning, lmao. Then we started building our Minecraft house—never finished it, but I just loved doing that with you. Watching the sunset and sunrise alongside you, spawning animals just to kill them, horseback riding, and that huge bonfire... every moment was magical because it was with you, the love of my life 
+      </p>
+      <img src="pictures/minecraft.jpg" alt="Minecraft Date">
+    </div>
+
+    <!-- Memory 3: Our First FaceTime -->
+    <div class="memory">
+      <h2>Our First FaceTime (January 1st)</h2>
+      <p>
+        The first time I was on FaceTime with you, it felt unreal. After all the texting and calling, actually seeing you in real time was something else. I kept staring at you, seeing you wear the necklace I got you for the first time, and it made me feel like a part of me was there with you. Hearing your voice without delay, watching you smile and laugh, and being all shy when I looked at you—that was the cutest thing in the world. Every little expression, the way you'd cover your face or look away, made me fall for you even more. In that moment, the distance didn't even matter 🤍
+      </p>
+      <div class="video-container">
+        <video muted loop autoplay playsinline preload="auto">
+          <source src="pictures/ft1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video muted loop autoplay playsinline preload="auto">
+          <source src="pictures/ft2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Memory 4: Virtual Marriage -->
+    <div class="memory">
+      <h2>Virtual Marriage (January 7th)</h2>
+      <p>
+        The day we virtually got married, it might have been just for fun, but in my heart, you had been my wife long before that. I'll always remember how excited you were seeing this certificate—it felt like a glimpse into the future we both dream of. And even if it's not official yet, you are already my wife in every way that matters. My heart, my soul, my entire being already belongs to you, and nothing will ever change that. I can't wait for the day we're finally married for real, to hold the real certificate in our hands, knowing it only confirms what I've always felt—that we were meant to spend eternity together
+      </p>
+      <img src="pictures/cert.jpg" alt="Virtual Marriage Certificate">
+    </div>
+
+    <!-- Memory 5: Valentine's Day -->
+    <div class="memory">
+      <h2>Valentine's Day (February 14th)</h2>
+      <p>
+        Then came our first Valentine's Day. I remember being so excited for February to come so I could finally ask you to be my valentine. I had been working on my very first website just for that moment, and it was all worth it when I saw your reaction—the way you lit up with happiness made everything so special. It was the best Valentine's Day ever. You put our names on the lightbox, that was so cute, and we played Squid Game together and had so much fun. I couldn't have asked for a better way to celebrate (except for being in person with you, of course)
+      </p>
+      <!-- Swiper Slideshow -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="pictures/val1.jpg" alt="Names On Lightbox">
+          </div>
+          <div class="swiper-slide">
+            <img src="pictures/val2.jpg" alt="Squid Game Selfie">
+          </div>
+          <div class="swiper-slide">
+            <img src="pictures/val3.jpg" alt="Miah ded">
+          </div>
+          <div class="swiper-slide">
+            <img src="pictures/val4.jpg" alt="Miah Turned Black">
+          </div>
+          <div class="swiper-slide">
+            <img src="pictures/val5.jpg" alt="Eyes Locked">
+          </div>
+          <div class="swiper-slide">
+            <img src="pictures/val6.jpg" alt="Valentine's Day Site">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Memory 6: Birthday -->
+    <div class="memory">
+      <h2>Birthday (March 31st)</h2>
+      <p>
+        Ahh my first birthday with you, you really made sure it was special and memorable, and trust me, it truly was the best birthday i've ever had. i remember the long birthday message you sent me, expressing your love and emotions, it almost made me tear up lmao. we had a few things planned for the main day, and watching you on facetime, surprisingly you weren't as shy as you usually are. and to no one's surprise, i found myself lost in your beauty again
+      </p>
+      
+      <div class="video-container">
+        <video muted loop autoplay playsinline preload="auto">
+          <source src="pictures/bday1.mp4" type="video/mp4">
+          your browser does not support the video tag.
+        </video>
+        <video muted loop autoplay playsinline preload="auto">
+          <source src="pictures/bday2.mp4" type="video/mp4">
+          your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p>
+        the way we both had cupcakes, you singing me a birthday song, and us blowing out the candles before enjoying the cake. the distance really didn't matter in that moment because I felt as if I was right there with you. our endless talks that I could enjoy for eternity, oh miahhh
+        <br><br>
+        and the minecraft surprise ahhh, it was the best. I was literally amazed by what you did, my love. the aquarium, the teddy bear, the pets, our house, and our dummies. it was all so amazing. I loved every part of it, baby. I'm so grateful for you making my birthday so special. spending that time with you was the best part of my day
+      </p>
+
+      <!-- Polaroid Wall -->
+      <div class="polaroid-wall">
+
+        <!-- Row 1 -->
+        <div class="row">
+          <svg class="string" viewBox="0 0 120 30" preserveAspectRatio="none">
+            <path d="M-10,5 Q60,30 130,5" />
+          </svg>
+          <div class="polaroid" style="top: -0px; left: 30px; transform: rotate(-5deg);">
+            <img src="pictures/bday1.jpg" alt="I Love You">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -88px; left: 10px; transform: rotate(15deg);">
+          </div>
+          <div class="polaroid" style="top: 5px; left: 10px; transform: rotate(2deg);">
+            <img src="pictures/bday2.jpg" alt="Teddy Bear">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -96px; left: 20px; transform: rotate(-10deg);">
+          </div>
+          <div class="polaroid" style="top: 4px; left: -18px; transform: rotate(-7deg);">
+            <img src="pictures/bday3.jpg" alt="Five">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -97px; left: 15px; transform: rotate(-15deg);">
+          </div>
+        </div>
+
+          <!-- Row 2 -->
+        <div class="row">
+          <svg class="string" viewBox="0 0 120 30" preserveAspectRatio="none">
+            <path d="M-10,5 Q60,30 130,5" />
+          </svg>
+          <div class="polaroid" style="top: 3px; left: 15px; transform: rotate(4deg);">
+            <img src="pictures/bday4.jpg" alt="Pokiioh">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -102px; left: 20px; transform: rotate(-40deg);">
+          </div>
+          <div class="polaroid" style="top: 5px; left: -10px; transform: rotate(-2deg);">
+            <img src="pictures/bday5.jpg" alt="Hasknn">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -91px; left: 25px; transform: rotate(10deg);">
+          </div>
+          <div class="polaroid" style="top: 0px; left: -30px; transform: rotate(5deg);">
+            <img src="pictures/bday6.jpg" alt="I Love You">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -98px; left: 20px; transform: rotate(-15deg);">
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row">
+          <svg class="string" viewBox="0 0 120 30" preserveAspectRatio="none">
+            <path d="M-10,5 Q60,30 130,5" />
+          </svg>
+          <div class="polaroid" style="top: 2px; left: 30px; z-index: 2; transform: rotate(-3deg);">
+            <img src="pictures/bday7.jpg" alt="Watching Sunset">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -98px; left: 10px; transform: rotate(-15deg);">
+          </div>
+          <div class="polaroid" style="top: 5px; left: 12px; z-index: 1; transform: rotate(3deg);">
+            <img src="pictures/bday8.jpg" alt="With Kitten">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -85px; left: 20px; transform: rotate(30deg);">
+          </div>
+          <div class="polaroid" style="top: 3px; left: -5px; transform: rotate(-10deg);">
+            <img src="pictures/bday9.jpg" alt="Huge Bonfire">
+            <img class="clip" src="pictures/clip.png" alt="clip" style="top: -103px; left: 10px; transform: rotate(-50deg);">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+
+    // Create falling petals
+    function createPetals() {
+      const container = document.getElementById('petalsContainer');
+      const colors = ['red', 'lavender'];
+      const petalCount = 15;
+
+      for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.className = `petal ${colors[Math.floor(Math.random() * colors.length)]}`;
+        
+        petal.style.left = `${Math.random() * 100}%`;
+        petal.style.animationDuration = `${Math.random() * 10 + 10}s`;
+        petal.style.animationDelay = `${Math.random() * 5}s`;
+        petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+        petal.style.width = `${Math.random() * 20 + 15}px`;
+        petal.style.height = petal.style.width;
+        
+        container.appendChild(petal);
+      }
+    }
+
+    // JavaScript for Scrolling Animations and Video Playback
+    document.addEventListener("DOMContentLoaded", function () {
+      createPetals();
+      
+      const openingSection = document.querySelector(".opening-section");
+      const memories = document.querySelectorAll(".memory, .askout-section");
+      const videos = document.querySelectorAll("video");
+
+      // Handle opening section fade-out and scaling
+      const openingObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            openingSection.classList.add("hidden");
+          } else {
+            openingSection.classList.remove("hidden");
+          }
+        });
+      }, {
+        threshold: 0.5,
+      });
+
+      openingObserver.observe(openingSection);
+
+      // Handle memory animations
+      const memoryObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("hidden");
+          } else {
+            entry.target.classList.add("hidden");
+          }
+        });
+      }, {
+        threshold: 0.3,
+      });
+
+      memories.forEach((memory) => {
+        memoryObserver.observe(memory);
+      });
+
+      // Handle video playback
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.play();
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, {
+        threshold: 0.5,
+      });
+
+      videos.forEach((video) => {
+        videoObserver.observe(video);
+      });
+    });
+  </script>
+  
+  <script>
+// Track touch duration
+let touchStartTime = 0;
+const SELECTION_DELAY = 500; // 0.5 second delay
+
+// Prevent immediate selection
+document.addEventListener('mousedown', function(e) {
+  if (e.target.matches('p, h1, h2, .memory-text')) {
+    touchStartTime = Date.now();
+    e.preventDefault();
+  }
+}, true);
+
+// Enable selection after long press
+document.addEventListener('mouseup', function(e) {
+  if (e.target.matches('p, h1, h2, .memory-text')) {
+    const touchDuration = Date.now() - touchStartTime;
+    if (touchDuration >= SELECTION_DELAY) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(e.target);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+  }
+}, true);
+
+// Clear selection on touch end
+document.addEventListener('touchend', function() {
+  window.getSelection().removeAllRanges();
+});
+// Media Selection Control
+let isSelectingText = false;
+
+document.addEventListener('selectionchange', () => {
+  isSelectingText = window.getSelection().toString().length > 0;
+  document.querySelectorAll('img, video').forEach(media => {
+    media.style.pointerEvents = isSelectingText ? 'none' : 'auto';
+  });
+});
+
+// Reset when selection ends
+document.addEventListener('mouseup', () => {
+  setTimeout(() => {
+    if (!window.getSelection().toString()) {
+      isSelectingText = false;
+      document.querySelectorAll('img, video').forEach(media => {
+        media.style.pointerEvents = 'auto';
+      });
+    }
+  }, 100);
+});
+</script>
+
+  <!-- Background Music -->
+  <audio id="background-music" loop preload="auto">
+    <source src="sounds/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+    <!-- Loading Indicator -->
+  <div id="loading-indicator">
+    <img src="pictures/load.gif" alt="Loading...">
+  </div>
+
+  <script>
+    // Polaroid Fullscreen Viewer (with Fade)
+document.querySelectorAll('.polaroid img:not(.clip)').forEach(img => {
+  img.addEventListener('click', (e) => {
+    e.stopPropagation();
+    
+    // Create overlay
+    const fullscreenDiv = document.createElement('div');
+    fullscreenDiv.className = 'fullscreen-polaroid';
+    
+    // Create image
+    const fullscreenImg = document.createElement('img');
+    fullscreenImg.src = img.src;
+    fullscreenDiv.appendChild(fullscreenImg);
+    document.body.appendChild(fullscreenDiv);
+    
+    // Trigger fade-in (after a tiny delay for DOM to register)
+    setTimeout(() => {
+      fullscreenDiv.classList.add('active');
+    }, 10);
+    
+    // Close on click (with fade-out)
+    fullscreenDiv.addEventListener('click', () => {
+      fullscreenDiv.classList.remove('active');
+      
+      // Remove after animation completes
+      setTimeout(() => {
+        fullscreenDiv.remove();
+      }, 300); // Match this with CSS transition duration
+    });
+  });
+});
+
+    const bgMusic = document.getElementById('background-music');
+const loadingIndicator = document.getElementById('loading-indicator'); // Keep this element
+bgMusic.volume = 0.3;
+bgMusic.preload = "auto";
+
+let audioUnlocked = false;
+
+// Loading state handlers (optional)
+bgMusic.addEventListener('waiting', () => {
+  loadingIndicator.style.display = 'block';
+});
+bgMusic.addEventListener('canplay', () => {
+  loadingIndicator.style.display = 'none';
+});
+
+function unlockAudio() {
+  if (audioUnlocked) return;
+  
+  loadingIndicator.style.display = 'block'; // Show when attempting to play
+  bgMusic.play()
+    .then(() => {
+      bgMusic.pause();
+      audioUnlocked = true;
+      bgMusic.play(); 
+    })
+    .catch(e => console.log("Audio error"))
+    .finally(() => {
+      loadingIndicator.style.display = 'none'; // Always hide when done
+    });
+}
+
+// Single-tap activation
+document.addEventListener('touchstart', unlockAudio, { once: true });
+document.addEventListener('click', unlockAudio, { once: true });
+
+    // Keep this improved version in your new audio code:
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    bgMusic.pause();
+  } else if (audioUnlocked) {  // Only resume if audio was previously unlocked
+    bgMusic.play().catch(e => console.log("Resume failed:", e));
+  }
+});
+  </script>
+</body>
+</html>
