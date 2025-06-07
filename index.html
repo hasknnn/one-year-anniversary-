@@ -471,6 +471,10 @@ img, video {
       width: 100%;
       border-radius: 10px;
       margin-bottom: -10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Base shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: block; /* Ensures proper shadow rendering */
+  position: relative; /* Helps with shadow layering */
     }
 
     .askout-section .memory-text {
@@ -478,7 +482,7 @@ img, video {
       font-size: 16px;
       line-height: 1.6;
       position: relative;
-      overflow: hidden;
+      overflow: visible !important;
     }
 
     .askout-section .memory-text {
