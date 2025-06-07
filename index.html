@@ -5,7 +5,7 @@
   <meta property="og:title" content="One year with my love 🤍">
   <meta property="og:description" content="Celebrating our beautiful journey together">
   <meta property="og:image" content="https://i.imgur.com/s4msp82.jpeg">
-  <meta property="og:url" content="https://hasknnn.github.io/one-year-anniversary-/"> <!-- Replace with your URL -->
+  <meta property="og:url" content="YOUR_WEBSITE_URL"> <!-- Replace with your URL -->
   <meta property="og:type" content="website">
 
   <!-- Twitter Card (for Instagram/Snapchat/Twitter) -->
@@ -257,8 +257,8 @@ img, video {
     }
 
     .pictures-below img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
     }
 
     .pictures-below img:first-child {
@@ -289,8 +289,8 @@ img, video {
     }
 
     .memory img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
     }
 
     .video-container {
@@ -350,8 +350,8 @@ img, video {
     }
 
     .polaroid:hover {
-      transform: scale(1.03); /* Slightly larger */
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Deeper shadow */
+      transform: scale(1.03) !important; /* Slightly larger */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important; /* Deeper shadow */
     }
 
     .string {
@@ -418,18 +418,20 @@ img, video {
 }
 
     video {
+      position: relative;
+      z-index: 1;
       width: 45%;
       max-width: 400px;
       aspect-ratio: 9/16;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+      transition: transform 0.5s ease, box-shadow 0.5s ease !important;
     }
 
     video:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
     }
 
     video:first-child {
@@ -528,9 +530,19 @@ img, video {
     }
 
     .askout-section .bottom-gif:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05) !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
     }
+    
+    /* Add this to your existing styles */
+.askout-section .top-image {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.askout-section .top-image:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+}
 
     /* Swiper Styles */
     .swiper-container {
